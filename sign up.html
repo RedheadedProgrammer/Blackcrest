@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackCrest | Sign up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="icon" type="img/png" href="./img/project base logo.jpg">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+      /*
+.roboto-slab-content{
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}*/
+       .gradient-custom-3 {
+background: linear-gradient(300deg, #3A3959, rgba(13, 13, 13), #363740);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+ .gradient-custom-4 {
+/*fallback for old browsers*/
+background: linear-gradient(to bottom, #3A3959, #777AA6); 
+color: #c5c6d9
+     
+ }
+
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.card{
+  box-shadow: 1px 3px 3px rgba(119, 122, 166, 0.3);
+   backdrop-filter: blur(10px);
+            background-color: rgba(13, 13, 13, 0.3);
+  color: #c5c6d9;
+        font-family: "Roboto Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style:normal;
+}
+input{
+  box-shadow: 1px 5px 5px rgba(119, 122, 166, 0.5);
+}
+    </style>
+</head>
+<body>
+    <section class="vh-100 bg-image"
+  style="background-image: url(#);">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-400">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-7 col-lg-5 col-xl-4">
+          <div class="card" style="border-radius: 15px; max-width: 350px; margin: 0 auto;">
+            <div class="card-body p-4">
+              <h2 class="text-uppercase text-center mb-4">Create Account</h2>
+
+              <form>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" placeholder="Full-Name" />
+                  <label aria-placeholder="hello" class="form-label" for="form3Example1cg"></label>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" placeholder="Email" />
+                  <label class="form-label" for="form3Example3cg"></label>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" placeholder="Password" />
+                  <label class="form-label" for="form3Example4cg"></label>
+                </div>
+
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="password" id="form3Example4cdg" class="form-control form-control-lg" placeholder="Confirm Password"/>
+                  <label class="form-label" for="form3Example4cdg"></label>
+                </div>
+
+                <div class="form-check d-flex justify-content-center mb-5">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
+                  <label class="form-check-label" for="form2Example3g">
+                    I agree to the <a href="#!" class="text-secondary"><u>Terms of service</u></a>
+                  </label>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button type="submit" data-mdb-button-init
+                    data-mdb-ripple-init class="btn  btn-block btn-lg gradient-custom-4 text">Register</button>
+                </div>
+
+                <p class="text-center text- mt-5 mb-0"> Already have an account? <a href="./login.html"
+                    class="fw-bold text-secondary"><u>Login here</u></a></p>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+<script>
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("form3Example1cg").value.trim();
+  const email = document.getElementById("form3Example3cg").value.trim();
+  const password = document.getElementById("form3Example4cg").value;
+  const confirmPassword = document.getElementById("form3Example4cdg").value;
+  const agree = document.getElementById("form2Example3cg").checked;
+
+  if (!name || !email || !password || !confirmPassword) {
+    alert("Please fill in all fields.");
+    return;
+  }
+  if (password !== confirmPassword) {
+    alert("Passwords do not match.");
+    return;
+  }
+  if (!agree) {
+    alert("You must agree to the Terms of service.");
+    return;
+  }
+
+  // Save user to localStorage (for demo purposes)
+  localStorage.setItem("user", JSON.stringify({ name, email, password }));
+
+  alert("Registration successful! Redirecting to login...");
+  window.location.href = "login.html";
+});
+</script>
+</body>
+</html>
