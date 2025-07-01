@@ -1,0 +1,44 @@
+   /*
+.roboto-slab-content{
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}*/
+       .gradient-custom-3 {
+background: linear-gradient(300deg, #3A3959, rgba(13, 13, 13), #363740);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+ .gradient-custom-4 {
+
+background :linear-gradient(to bottom, #3A3959, #777AA6); 
+color: #c5c6d9
+     
+ }
+
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.card{
+  box-shadow: 1px 3px 3px rgba(119, 122, 166, 0.3);
+   backdrop-filter: blur(10px);
+            background-color: rgba(13, 13, 13, 0.3);
+  color: #c5c6d9;
+        font-family: "Roboto Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style:normal;
+}
+input{
+  box-shadow: 1px 5px 5px rgba(119, 122, 166, 0.5);
+}

@@ -9,59 +9,14 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-
-    <style>
-      /*
-.roboto-slab-content{
-  font-family: "Roboto Slab", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}*/
-       .gradient-custom-3 {
-background: linear-gradient(300deg, #3A3959, rgba(13, 13, 13), #363740);
-  background-size: 180% 180%;
-  animation: gradient-animation 18s ease infinite;
-}
- .gradient-custom-4 {
-
-background :linear-gradient(to bottom, #3A3959, #777AA6); 
-color: #c5c6d9
-     
- }
-
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-.card{
-  box-shadow: 1px 3px 3px rgba(119, 122, 166, 0.3);
-   backdrop-filter: blur(10px);
-            background-color: rgba(13, 13, 13, 0.3);
-  color: #c5c6d9;
-        font-family: "Roboto Slab", serif;
-        font-optical-sizing: auto;
-        font-weight: bold;
-        font-style:normal;
-}
-input{
-  box-shadow: 1px 5px 5px rgba(119, 122, 166, 0.5);
-}
-    </style>
+    <link href="./css/signup.css" rel="stylesheet">
+    
 </head>
 <body>
     <section class="vh-100 bg-image"
   style="background-image: url(#);">
-  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-    <div class="container ">
+  <div class="mask d-flex align-items-center  gradient-custom-3">
+    <div class="container  ">
       <div class="row d-flex justify-content-center align-items-center">
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
           <div class="card" style="border-radius: 15px;">
@@ -114,36 +69,8 @@ input{
     </div>
   </div>
 </section>
+<script src="./js/signup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-<script>
-document.querySelector("form").addEventListener("submit", function(e) {
-  e.preventDefault();
 
-  const name = document.getElementById("form3Example1cg").value.trim();
-  const email = document.getElementById("form3Example3cg").value.trim();
-  const password = document.getElementById("form3Example4cg").value;
-  const confirmPassword = document.getElementById("form3Example4cdg").value;
-  const agree = document.getElementById("form2Example3cg").checked;
-
-  if (!name || !email || !password || !confirmPassword) {
-    alert("Please fill in all fields.");
-    return;
-  }
-  if (password !== confirmPassword) {
-    alert("Passwords do not match.");
-    return;
-  }
-  if (!agree) {
-    alert("You must agree to the Terms of service.");
-    return;
-  }
-
-  // Save user to localStorage (for demo purposes)
-  localStorage.setItem("user", JSON.stringify({ name, email, password }));
-
-  alert("Registration successful! Redirecting to login...");
-  window.location.href = "login.html";
-});
-</script>
 </body>
 </html>

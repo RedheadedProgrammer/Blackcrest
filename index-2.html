@@ -9,7 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
         <link rel="icon" type="img/png" href="./img/project base logo.jpg" style="border-radius: 50%;">
-   <style>
+   
+
+              <style>
+    
         .desktop-navbar  {
           backdrop-filter: blur(10px);
             background-color: rgba(13, 13, 13, 0.3); /* Light transparency */
@@ -515,8 +518,7 @@ carousel-group {
             <li><a href="#faq" class="nav-link px-2">FAQ</a></li> 
         </ul> 
            <div class="col-md-3 text-end"> 
-               
-
+             
            </div> 
       </div>
     </div>
@@ -917,47 +919,12 @@ carousel-group {
               <p style="text-align: center; margin: auto;"> © 2025 BlackCrest Inc</p>
 
               
-              <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                  const featureBoxes = document.querySelectorAll(".feature-box");
-                  const tabs = document.querySelectorAll(".content-tab");
-              
-                  featureBoxes.forEach((box) => {
-                    box.addEventListener("click", function () {
-                      // Remove active class from all boxes and tabs
-                      featureBoxes.forEach((b) => b.classList.remove("active"));
-                      tabs.forEach((tab) => tab.classList.remove("active"));
-              
-                      // Add active class to clicked box and corresponding tab
-                      this.classList.add("active");
-                      const tabId = this.getAttribute("data-id");
-                      document.getElementById("tab-" + tabId).classList.add("active");
-                    });
-                  });
-                });
-              </script>
-              <script>
-                window.addEventListener('load', function() {
-                  const preloader = document.getElementById('preloader');
-                  const minTime = 1000; // 1 seconds
-                  const start = performance.timing.navigationStart;
-                  const now = Date.now();
-                  const elapsed = now - start;
-                  const delay = Math.max(minTime - elapsed, 0);
-              
-                  setTimeout(() => {
-                    if (preloader) {
-                      preloader.style.opacity = '0';
-                      setTimeout(() => preloader.style.display = 'none', 400);
-                    }
-                  }, delay);
-                });
-              </script>
+             
               
               
               
     
-      
+       <script src="./js/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
